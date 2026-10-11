@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Escrita</title>
+  <meta name="description" content="Caderno de textos e ideias: pastas, tags, busca, anotações e sincronização com GitHub.">
+  <meta name="theme-color" content="#f1e3a8">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="topbar">
+    <button id="btn-sidebar" class="btn icon-only" type="button" aria-label="Mostrar ou ocultar a lista de pastas"></button>
+    <div class="brand">
+      <span class="brand-ico" aria-hidden="true"></span>
+      <span class="brand-name">Escrita</span>
+      <span class="brand-sub">caderno de textos e ideias</span>
+    </div>
+    <div class="search">
+      <span class="search-ico" aria-hidden="true"></span>
+      <input id="search" type="search" placeholder="Buscar trechos, palavras ou #tags…   Ctrl+K" autocomplete="off" spellcheck="false" aria-label="Buscar">
+      <button id="search-clear" class="btn icon-only ghost" type="button" hidden aria-label="Limpar busca"></button>
+    </div>
+    <div class="top-actions">
+      <button id="btn-file" class="btn" type="button">Arquivo</button>
+      <button id="btn-github" class="btn" type="button">GitHub</button>
+      <button id="btn-help" class="btn icon-only" type="button" aria-label="Ajuda"></button>
+    </div>
+  </header>
+
+  <div id="layout">
+    <aside id="sidebar" aria-label="Pastas e notas">
+      <div class="side-tools">
+        <button id="new-folder" class="btn small" type="button">Pasta</button>
+        <button id="new-note" class="btn small primary" type="button">Nota</button>
+        <button id="new-image" class="btn small" type="button">Imagem</button>
+      </div>
+      <div class="side-ctx">Criar em: <span id="ctx-path">raiz</span></div>
+      <details id="tags-panel" open>
+        <summary>Tags <small id="tags-count"></small></summary>
+        <div id="tags-body"></div>
+      </details>
+      <div class="side-sort">
+        <label for="sort">Ordenar notas</label>
+        <select id="sort"><option value="name">A–Z</option><option value="recent">Mais recentes</option></select>
+      </div>
+      <div id="tree" class="tree" role="tree"></div>
+    </aside>
+    <main id="main"></main>
+  </div>
+  <div id="sidebar-backdrop"></div>
+  <datalist id="taglist"></datalist>
+
+  <script src="vendor/marked.umd.js"></script>
+  <script src="vendor/purify.min.js"></script>
+  <script src="vendor/jszip.min.js"></script>
+  <script src="js/format.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/markdown.js"></script>
+  <script src="js/sync.js"></script>
+  <script src="js/io.js"></script>
+  <script src="js/app-core.js"></script>
+  <script src="js/app-import.js"></script>
+  <script src="js/app-sidebar.js"></script>
+  <script src="js/app-editor.js"></script>
+  <script src="js/app-topbar.js"></script>
+  <script src="js/app-main.js"></script>
+</body>
+</html>

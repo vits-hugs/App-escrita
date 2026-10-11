@@ -1,0 +1,17 @@
+{
+  "name": "Escrita — caderno de textos e ideias",
+  "short_name": "Escrita",
+  "description": "Pastas, tags, busca, anotações e sincronização com GitHub.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3e6b0",
+  "theme_color": "#f1e3a8",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

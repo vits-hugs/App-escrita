@@ -1,0 +1,15 @@
+{
+  "name": "app-escrita",
+  "version": "1.0.0",
+  "description": "Escrita — caderno de textos e ideias (pastas, tags, busca, anotações, GitHub).",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "node tests/format.test.js && node tests/app.smoke.js"
+  },
+  "devDependencies": {
+    "fake-indexeddb": "^6.2.5",
+    "jsdom": "^29.1.1",
+    "jszip": "^3.10.2"
+  }
+}
